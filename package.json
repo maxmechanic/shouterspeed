@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "watchify src/ -o extension/index.js --debug",
+    "build": "browserify src/ -o extension/index.js"
+  },
+  "dependencies": {
+    "browserify": "^13.1.0",
+    "watchify": "^3.7.0"
+  }
+}

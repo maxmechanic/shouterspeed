@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "shouterspeed",
+    "description": "shouterspeed"
+  },
+  "appDescription": {
+    "message": "speech to speed",
+    "description": "up then down"
+  }
+}
