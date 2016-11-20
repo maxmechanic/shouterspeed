@@ -21,7 +21,7 @@ gumPromise.then(stream => {
     analyser.getByteFrequencyData(dataArray)
 
     const peakFreq = Math.max(...dataArray)
-    const rate = peakFreq / 200
+    const rate = peakFreq / 210
 
     for (let vid of vids) {
       vid.playbackRate = rate
