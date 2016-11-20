@@ -1,7 +1,13 @@
 const gumPromise = navigator.mediaDevices.getUserMedia({audio: true, video: false})
 
 gumPromise.then(stream => {
-  const vids = Array.from(document.querySelectorAll('video'))
+  let vids = Array.from(document.querySelectorAll('video'))
+  const observer = new MutationObserver(
+    () => vids = Array.from(document.querySelectorAll('video'))
+  )
+  const config = { childList: true, subtree: true }
+  observer.observe(document.body, config)
+
   const context = new AudioContext()
   const input = context.createMediaStreamSource(stream)
   const analyser = context.createAnalyser()
